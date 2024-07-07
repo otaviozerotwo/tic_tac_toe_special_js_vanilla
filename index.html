@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe Special</title>
+
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <h1>Tic Tac Toe Special</h1>
+
+  <div class="container">
+    <div class="controls">
+      <div class="symbol">
+        <label for="symbol">Chose your symbol: </label>
+        <label>
+          <input type="radio" name="symbol" value="X" checked>
+          X
+        </label>
+        <label>
+          <input type="radio" name="symbol" value="O">
+          O
+        </label>
+      </div>
+  
+      <div class="algorithm">
+        <label for="algorithm">Chose the algorithm: </label>
+        <label>
+          <input type="radio" name="algorithm" value="minimax" checked>
+          Minimax
+        </label>
+        <label>
+          <input type="radio" name="algorithm" value="alphabeta">
+          Alpha-Beta
+        </label>
+      </div>
+      
+      <div class="level">
+        <label for="depth">Difficulty Level (1-4):</label>
+        <input type="number" id="depth" value="3" min="1" max="4">
+      </div>
+      
+      <div class="btn-replay-container">
+        <button id="btn-replay" class="btn-replay">Replay</button>
+      </div>
+  
+    </div>
+
+    <div class="board-container">
+      <table id="board"></table>
+    </div>
+
+    <div class="placar"></div>
+  
+    <div id="end-game-container" class="end-game-container"></div>
+  </div>
+
+  <script src="./js/renderBoard.js"></script>
+  <script src="./js/minimax.js"></script>
+  <script src="./js/alphabeta.js"></script>
+  <script src="./js/ticTacToe.js"></script>
+</body>
+</html>
