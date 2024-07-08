@@ -96,7 +96,7 @@ function aiMove() {
 }
 
 function checkWin(board, symbol) {
-  // Verifica todas as direções possíveis para encontrar uma sequência de 4
+  // Verifica todas as direções possíveis para encontrar uma sequência com 4
   const directions = [
     { x: 1, y: 0 }, // Horizontal
     { x: 0, y: 1 }, // Vertical
