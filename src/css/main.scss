@@ -1,0 +1,117 @@
+@use 'reset';
+@use 'variables';
+
+@mixin titleMixin($fontSize) {
+  font-size: $fontSize;
+  font-family: variables.$fontMainTitle;
+}
+
+body {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #FFF;
+  // TODO: entender e documentar a linha a seguir:
+  background-image: radial-gradient(#818cf8 1px, transparent 1px);
+  // TODO: entender e documentar a linha a seguir:
+  background-size: 28px 28px;  
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.bg-image-board {
+  height: 214px;
+  width: 214px;
+  background-image: url('../../assets/images/board_tic_tac_toe.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 32px 0;
+  
+  @media (max-height: 599px) {
+    height: 182px;
+    width: 182px;
+    margin: 24px 0;
+  }
+}
+
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  text-align: center;
+  
+  h1 {
+    // TODO: entender e documentar a linha a seguir:
+    @include titleMixin(clamp(2.8rem, 8vw, 5.5rem));
+  }
+  
+  span {
+    // TODO: entender e documentar a linha a seguir:
+    @include titleMixin(clamp(1.6rem, 4.5vw, 3rem));
+    letter-spacing: 1.6px;
+  }
+}
+
+// TODO: entender e documentar o bloco a seguir:
+.text-gradient-animation {
+  background: linear-gradient(
+    90deg, 
+    #1e1b4b 0%,
+    #4f46e5 40%,
+    #818cf8 50%,
+    #4f46e5 60%,
+    #1e1b4b 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animationGradient 3.5s linear 1.2s infinite;
+}
+
+// TODO: entender e documentar o bloco a seguir:
+@keyframes animationGradient {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.separator-bar {
+  height: 4px;
+  background: linear-gradient(90deg, #4f46e5, #818cf8);
+  width: 64px;
+  margin: 28px 0;
+  border: none;
+  border-radius: 99px;
+  opacity: 0.7;
+}
+
+.btn-primary {
+  padding: 16px 48px;
+  // TODO: entender e documentar a linha a seguir:
+  font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+  font-family: variables.$fontTextButton;
+  font-weight: 900;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  border-radius: 12px;
+  // TODO: entender e documentar a linha a seguir:
+  background: linear-gradient(135deg, #4f46e5 0%, #6d28d9 100%);
+  color: #FFF;
+  cursor: pointer;
+  // TODO: entender e documentar a linha a seguir:
+  box-shadow: 0 6px 24px rgba(99,102,241,0.35), 0 2px 6px rgba(99,102,241,0.2);
+}

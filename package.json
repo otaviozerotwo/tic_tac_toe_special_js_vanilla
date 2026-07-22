@@ -1,0 +1,27 @@
+{
+  "name": "tic_tac_toe_special_js_vanilla",
+  "version": "1.0.0",
+  "description": "Escreva a descrição da sua aplicação.",
+  "homepage": "https://github.com/otaviozerotwo/tic_tac_toe_special_js_vanilla#readme",
+  "bugs": {
+    "url": "https://github.com/otaviozerotwo/tic_tac_toe_special_js_vanilla/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/otaviozerotwo/tic_tac_toe_special_js_vanilla.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass src/css/main.scss dist/css/main.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "sass": "^1.101.0"
+  },
+  "dependencies": {
+    "aos": "^3.0.0-beta.6"
+  }
+}
