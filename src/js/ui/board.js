@@ -1,4 +1,4 @@
-function renderBoard(board, handleClick) {
+export function renderBoard(board, handleClick) {
   const table = document.getElementById('board');
   table.innerHTML = '';
 
@@ -10,7 +10,7 @@ function renderBoard(board, handleClick) {
       cell.classList.add('cell');
 
       cell.addEventListener('click', () => handleClick(i, j));
-      cell.innerHTML = board[i][j];
+      cell.textContent = board[i][j];
       row.appendChild(cell);
     }
 

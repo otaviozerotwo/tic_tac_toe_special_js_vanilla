@@ -1,0 +1,13 @@
+dialog {
+  display: grid;
+  margin: auto;
+  padding: 0;
+  position: fixed;
+  overflow: hidden;
+  inset: 0;
+  border: none;
+
+  &:not([open]) {
+    opacity: 0;
+  }
+}

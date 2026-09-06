@@ -12,14 +12,16 @@
   },
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "sass": "sass src/css/main.scss dist/css/main.css --watch",
+    "dev": "parcel index.html src/css/main.scss src/js/game/alphabeta.js src/js/game/minimax.js src/js/ui/board.js src/js/game/ticTacToe.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "sass": "^1.101.0"
+    "@parcel/transformer-sass": "^2.16.4",
+    "parcel": "^2.16.4",
+    "sass": "^1.101.0",
+    "sharp": "^0.33.5"
   },
   "dependencies": {
     "aos": "^3.0.0-beta.6"

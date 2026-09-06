@@ -12,7 +12,9 @@ Escreva o objetivo da sua aplicação.
 
 ## Tecnologias Utilizadas
 
-- Liste as tecnologias que serão utilizadas
+- Node.js
+- Parcel
+- Sass
 
 ## 📂 Estrutura do Projeto
 
